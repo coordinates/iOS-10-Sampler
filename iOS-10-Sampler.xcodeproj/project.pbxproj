@@ -272,6 +272,11 @@
 		8C3A5F521D7EF7BE00B7A480 /* PersistentContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */; };
 		8C67369C1D7EFD1E00BAAE02 /* PersistentContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C67369B1D7EFD1E00BAAE02 /* PersistentContainer.storyboard */; };
 		8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C67369D1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld */; };
+		F45FA8131DA5E4AA000B695C /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FA8121DA5E4AA000B695C /* CallDirectoryHandler.swift */; };
+		F45FA8171DA5E4AA000B695C /* SamplerCallDirectory.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F45FA8101DA5E4AA000B695C /* SamplerCallDirectory.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F45FA81D1DA5E6D1000B695C /* CallDirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FA81C1DA5E6D1000B695C /* CallDirectoryViewController.swift */; };
+		F45FA81F1DA5E6EE000B695C /* CallDirectory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45FA81E1DA5E6EE000B695C /* CallDirectory.storyboard */; };
+		F45FA8251DA60355000B695C /* UserDefaults+CallDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45FA8241DA60355000B695C /* UserDefaults+CallDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -296,6 +301,13 @@
 			remoteGlobalIDString = 8AB430541D7A6B4900A3BD98;
 			remoteInfo = "iOS-10-Sampler";
 		};
+		F45FA8151DA5E4AA000B695C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AB4304D1D7A6B4900A3BD98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F45FA80F1DA5E4AA000B695C;
+			remoteInfo = SamplerCallDirectory;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -306,6 +318,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				8A1CC3931D7AC22E00562709 /* SamplerStickerPack.appex in Embed App Extensions */,
+				F45FA8171DA5E4AA000B695C /* SamplerCallDirectory.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +600,13 @@
 		8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentContainerViewController.swift; sourceTree = "<group>"; };
 		8C67369B1D7EFD1E00BAAE02 /* PersistentContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PersistentContainer.storyboard; sourceTree = "<group>"; };
 		8C67369E1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS10Sampler.xcdatamodel; sourceTree = "<group>"; };
+		F45FA8101DA5E4AA000B695C /* SamplerCallDirectory.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SamplerCallDirectory.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45FA8121DA5E4AA000B695C /* CallDirectoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallDirectoryHandler.swift; sourceTree = "<group>"; };
+		F45FA8141DA5E4AA000B695C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45FA81C1DA5E6D1000B695C /* CallDirectoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallDirectoryViewController.swift; sourceTree = "<group>"; };
+		F45FA81E1DA5E6EE000B695C /* CallDirectory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CallDirectory.storyboard; sourceTree = "<group>"; };
+		F45FA8241DA60355000B695C /* UserDefaults+CallDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+CallDirectory.swift"; sourceTree = "<group>"; };
+		F45FA8261DA608B7000B695C /* SamplerCallDirectory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SamplerCallDirectory.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -605,6 +625,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8AB430711D7A6B4A00A3BD98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F45FA80D1DA5E4AA000B695C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1097,6 +1124,7 @@
 				8AB430771D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
 				8AA0748C1D86830200FEAC28 /* libs */,
 				8A1CC38D1D7AC22E00562709 /* SamplerStickerPack */,
+				F45FA8111DA5E4AA000B695C /* SamplerCallDirectory */,
 				8AB430561D7A6B4900A3BD98 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1108,6 +1136,7 @@
 				8AB430691D7A6B4A00A3BD98 /* iOS-10-SamplerTests.xctest */,
 				8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */,
 				8A1CC38C1D7AC22E00562709 /* SamplerStickerPack.appex */,
+				F45FA8101DA5E4AA000B695C /* SamplerCallDirectory.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1167,6 +1196,7 @@
 				8A3F09AF1D83F80600D28DF2 /* New Fonts */,
 				8A081D181D876F5F00D7DDF4 /* PreviewInteraction */,
 				8A081E9D1D8841EF00D7DDF4 /* Proactive */,
+				F45FA81B1DA5E535000B695C /* CallDirectory */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -1181,6 +1211,26 @@
 				8C3A5F4E1D7EF7BE00B7A480 /* PersistentContainerViewController.swift */,
 			);
 			name = PersistentContainer;
+			sourceTree = "<group>";
+		};
+		F45FA8111DA5E4AA000B695C /* SamplerCallDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				F45FA8261DA608B7000B695C /* SamplerCallDirectory.entitlements */,
+				F45FA8121DA5E4AA000B695C /* CallDirectoryHandler.swift */,
+				F45FA8141DA5E4AA000B695C /* Info.plist */,
+			);
+			path = SamplerCallDirectory;
+			sourceTree = "<group>";
+		};
+		F45FA81B1DA5E535000B695C /* CallDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				F45FA81C1DA5E6D1000B695C /* CallDirectoryViewController.swift */,
+				F45FA81E1DA5E6EE000B695C /* CallDirectory.storyboard */,
+				F45FA8241DA60355000B695C /* UserDefaults+CallDirectory.swift */,
+			);
+			name = CallDirectory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1214,6 +1264,7 @@
 			);
 			dependencies = (
 				8A1CC3921D7AC22E00562709 /* PBXTargetDependency */,
+				F45FA8161DA5E4AA000B695C /* PBXTargetDependency */,
 			);
 			name = "iOS-10-Sampler";
 			productName = "iOS-10-Sampler";
@@ -1256,6 +1307,23 @@
 			productReference = 8AB430741D7A6B4A00A3BD98 /* iOS-10-SamplerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F45FA80F1DA5E4AA000B695C /* SamplerCallDirectory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F45FA81A1DA5E4AA000B695C /* Build configuration list for PBXNativeTarget "SamplerCallDirectory" */;
+			buildPhases = (
+				F45FA80C1DA5E4AA000B695C /* Sources */,
+				F45FA80D1DA5E4AA000B695C /* Frameworks */,
+				F45FA80E1DA5E4AA000B695C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SamplerCallDirectory;
+			productName = SamplerCallDirectory;
+			productReference = F45FA8101DA5E4AA000B695C /* SamplerCallDirectory.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1268,12 +1336,12 @@
 				TargetAttributes = {
 					8A1CC38B1D7AC22E00562709 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9Z86A4AWDE;
+						DevelopmentTeam = YL4Z4YD3ML;
 						ProvisioningStyle = Automatic;
 					};
 					8AB430541D7A6B4900A3BD98 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9Z86A4AWDE;
+						DevelopmentTeam = YL4Z4YD3ML;
 						ProvisioningStyle = Automatic;
 					};
 					8AB430681D7A6B4A00A3BD98 = {
@@ -1287,6 +1355,16 @@
 						DevelopmentTeam = 9Z86A4AWDE;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8AB430541D7A6B4900A3BD98;
+					};
+					F45FA80F1DA5E4AA000B695C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YL4Z4YD3ML;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1307,6 +1385,7 @@
 				8AB430681D7A6B4A00A3BD98 /* iOS-10-SamplerTests */,
 				8AB430731D7A6B4A00A3BD98 /* iOS-10-SamplerUITests */,
 				8A1CC38B1D7AC22E00562709 /* SamplerStickerPack */,
+				F45FA80F1DA5E4AA000B695C /* SamplerCallDirectory */,
 			);
 		};
 /* End PBXProject section */
@@ -1384,6 +1463,7 @@
 				8A081D091D8714CB00D7DDF4 /* Looper.storyboard in Resources */,
 				8A3F084A1D81D35000D28DF2 /* bias_mixed_10_tower_1_mixed_conv_1.dat in Resources */,
 				8A3F08501D81D35000D28DF2 /* bias_mixed_1_tower_1_conv.dat in Resources */,
+				F45FA81F1DA5E6EE000B695C /* CallDirectory.storyboard in Resources */,
 				8A3F08441D81D35000D28DF2 /* bias_conv_3.dat in Resources */,
 				8A3F08641D81D35000D28DF2 /* bias_mixed_4_tower_1_conv_2.dat in Resources */,
 				8A3F08C41D81D35000D28DF2 /* weights_mixed_4_tower_1_conv_3.dat in Resources */,
@@ -1563,6 +1643,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F45FA80E1DA5E4AA000B695C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1574,6 +1661,7 @@
 				8AB430871D7A6DA700A3BD98 /* RootViewCell.swift in Sources */,
 				8A5AE0BC1D7D58AB0095209E /* LivePhotoCaptureDelegate.swift in Sources */,
 				8A081D131D87394200D7DDF4 /* UIViewController+alert.swift in Sources */,
+				F45FA81D1DA5E6D1000B695C /* CallDirectoryViewController.swift in Sources */,
 				8AABF1511D7B53FF004A1FE1 /* SpeechRecognitionViewController.swift in Sources */,
 				8AA074931D86830200FEAC28 /* VideoCapture.swift in Sources */,
 				8A1CC3621D7AAFBC00562709 /* MetalCNNBasicViewController.swift in Sources */,
@@ -1590,6 +1678,7 @@
 				8A1CC3891D7ABCE400562709 /* MNISTDeepCNN.swift in Sources */,
 				8C3A5F501D7EF7BE00B7A480 /* Message+CoreDataClass.swift in Sources */,
 				8A3F09AC1D83F7F700D28DF2 /* FontsViewController.swift in Sources */,
+				F45FA8251DA60355000B695C /* UserDefaults+CallDirectory.swift in Sources */,
 				8A1CC3811D7AB10D00562709 /* SlimMPSCNN.swift in Sources */,
 				8C67369F1D7EFE7000BAAE02 /* iOS10Sampler.xcdatamodeld in Sources */,
 				8A6CE2EC1D854B9E00DC79B4 /* LivePhotoCaptureSessionManager.swift in Sources */,
@@ -1628,6 +1717,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F45FA80C1DA5E4AA000B695C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45FA8131DA5E4AA000B695C /* CallDirectoryHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1645,6 +1742,11 @@
 			isa = PBXTargetDependency;
 			target = 8AB430541D7A6B4900A3BD98 /* iOS-10-Sampler */;
 			targetProxy = 8AB430751D7A6B4A00A3BD98 /* PBXContainerItemProxy */;
+		};
+		F45FA8161DA5E4AA000B695C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F45FA80F1DA5E4AA000B695C /* SamplerCallDirectory */;
+			targetProxy = F45FA8151DA5E4AA000B695C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1672,7 +1774,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				DEVELOPMENT_TEAM = 9Z86A4AWDE;
+				DEVELOPMENT_TEAM = YL4Z4YD3ML;
 				INFOPLIST_FILE = SamplerStickerPack/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler.SamplerStickerPack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1684,7 +1786,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				DEVELOPMENT_TEAM = 9Z86A4AWDE;
+				DEVELOPMENT_TEAM = YL4Z4YD3ML;
 				INFOPLIST_FILE = SamplerStickerPack/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler.SamplerStickerPack";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1786,8 +1888,9 @@
 		8AB4307E1D7A6B4A00A3BD98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9Z86A4AWDE;
+				DEVELOPMENT_TEAM = YL4Z4YD3ML;
 				INFOPLIST_FILE = "iOS-10-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
@@ -1800,8 +1903,9 @@
 		8AB4307F1D7A6B4A00A3BD98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9Z86A4AWDE;
+				DEVELOPMENT_TEAM = YL4Z4YD3ML;
 				INFOPLIST_FILE = "iOS-10-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler";
@@ -1869,6 +1973,34 @@
 			};
 			name = Release;
 		};
+		F45FA8181DA5E4AA000B695C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = YL4Z4YD3ML;
+				INFOPLIST_FILE = SamplerCallDirectory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler.SamplerCallDirectory";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F45FA8191DA5E4AA000B695C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = YL4Z4YD3ML;
+				INFOPLIST_FILE = SamplerCallDirectory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shu223.iOS-10-Sampler.SamplerCallDirectory";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1916,6 +2048,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F45FA81A1DA5E4AA000B695C /* Build configuration list for PBXNativeTarget "SamplerCallDirectory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45FA8181DA5E4AA000B695C /* Debug */,
+				F45FA8191DA5E4AA000B695C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
